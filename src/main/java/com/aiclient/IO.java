@@ -17,19 +17,21 @@ public class IO {
         System.out.println("Type in your questions for the Tennis expert. Type 'exit' to end the conversation.");
 
         while (true) {
-            System.out.print("You: ");
-            String userInput = scanner.nextLine().trim();
+            conversation.seekInput();
 
-            if (userInput.equalsIgnoreCase("exit")) {
-                break;
-            }
-
-            CompletableFuture<Void> responseFuture = conversation.sendMessage(userInput);
+            CompletableFuture<Void> responseFuture = conversation.sendMessage();
             responseFuture.join(); // Wait for the response
 
             // Print the AI's response
-            String aiResponse = conversation.getMessages().get(conversation.getMessages().size() - 1).getContent();
+            String aiResponse = conversation.getMessages().get(conversation.getMessages().size() - 1).
+                getContent().getContent();
             System.out.println("Tennis Expert: " + aiResponse);
+            System.out.print("Do you wish to continue (y/n, default:y)? : ");
+            String userInput = scanner.nextLine().trim();
+
+            if (userInput.equalsIgnoreCase("n")) {
+                break;
+            }
         }
 
         System.out.println("Chat ended. Thank you for using the Tennis Expert AI!");
