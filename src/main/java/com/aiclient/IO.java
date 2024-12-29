@@ -88,18 +88,22 @@ public class IO {
     private void handleLookupDoctor(Map<String, Object> doctorDetails) {
         System.out.println(doctorDetails);
         if(doctorDetails.containsKey("doctorName")) {
-        String doctorName = (String) doctorDetails.get("doctorName");
-        List<Doctor> doctors = DoctorLookupService.lookupDoctor(doctorName);
-        if(doctors.isEmpty()) {
-            System.out.println("No doctor found with name: " + doctorName);
-        }
-        else {
-            if(doctors.size() == 1) {
-                System.out.println("Doctor name: " + doctors.get(0).getName());
+            String doctorName = (String) doctorDetails.get("doctorName");
+            List<Doctor> doctors = DoctorLookupService.lookupDoctor(doctorName);
+            if(doctors.isEmpty()) {
+                System.out.println("No doctor found with name: " + doctorName);
             }
             else {
-                System.out.println("Multiple doctors found with name: " + doctorName);
+                if(doctors.size() == 1) {
+                    System.out.println("Doctor name: " + doctors.get(0).getName());
+                }
+                else {
+                    System.out.println("Multiple doctors found with name: " + doctorName);
+                }
             }
+        }
+        else {
+            System.out.println("Please provide a doctor name");
         }
     }
 
