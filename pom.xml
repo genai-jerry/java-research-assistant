@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.genaipeople</groupId>
             <artifactId>openai-java</artifactId>
-            <version>0.1</version>
+            <version>0.2</version>
             <!-- You may want to add a comment explaining where to find this dependency -->
         </dependency>
     </dependencies>
