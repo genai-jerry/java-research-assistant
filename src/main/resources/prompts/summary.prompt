@@ -1,0 +1,29 @@
+We are a Mentoring program aimed at helping Software developers transition to Generative AI.  
+We are getting people who are signing up in our community but require nurturing in various topics around Generative AI and Mentoring. 
+
+We would like to communicate with them daily, with useful content across various mediums like email newsletter, podcasts, 
+Social media posts and YouTube videos. 
+
+We have subscribed to an RSS feed that gives us relevant content filtered on Generative AI, everyday. 
+We would like to share only the most relevant content out of all the links that we get. We are categorizing the content in different categories. 
+The Categories within Generative AI are, Software Development, Programming and Java Coding. 
+
+In the attached excel we have given samples of how to score content across each of these categories. 
+The aim is to finally select the content with the highest score. 
+
+Go through the excel and understand our scoring pattern. 
+Then. 
+
+For the content text provided below score each piece of content on each of the categories. Following what is there in the spreadsheet. 
+Score only the content below, nothing from the spreadsheet. 
+
+
+
+Give me the results in the following manner for each Content body. 
+{"Content Headline": "Content Body", "Score obtained for Software Development": "Reason for the scoring", 
+"Score Obtained for Generative AI": "Reason for the scoring", 
+"Score Obtained for Programming": "Reason for the scoring", 
+"Score obtained for Java Coding": "Reason for the scoring", 
+"Total Score obtained": "Score for Software Development + Score for Generative AI + Score for Programming + Score for Java Coding", 
+}
+        
