@@ -31,6 +31,8 @@ public class FeedbackManager {
             // Get user input
             System.out.print("\nEnter your response: ");
             String userInput = reader.readLine();
+            StringBuffer userInputBuffer = new StringBuffer(userInput);
+            assistantThread.handleFeedback(userInputBuffer);
         }
     }
 }

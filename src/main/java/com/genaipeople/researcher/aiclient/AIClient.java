@@ -68,7 +68,7 @@ public class AIClient {
 
     private static void runThread() {
         try {
-            String linkUrl = System.console().readLine("Enter link url: ");
+            String textToSummarize = System.console().readLine("Enter text to summarize: ");
             
             String assistantId = Config.getInstance().getValue("openai.assistantid");
             System.out.println("Executing for Assistant id: " + assistantId);
@@ -82,7 +82,7 @@ public class AIClient {
                 System.out.println("No assistant found, please create an assistant first");
                 return;
             }
-            executeThread(assistant, linkUrl);
+            executeThread(assistant, textToSummarize);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
